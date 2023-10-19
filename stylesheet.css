@@ -1,0 +1,80 @@
+.box {
+    width: 176px; /* Set the width of the box */
+    height: 1018px; /* Set the height of the box */
+    background-color: #F2F2F2; /* Set the background color */
+    border: 2px solid #F2F2F2; /* Add a border */
+    padding: 20px; /* Add padding inside the box */
+    text-align: left; /* Center the text horizontally */
+
+}
+
+/* Style the text inside the box */
+.box .h1 {
+        padding:0px; /* Add 10px of padding to the first paragraph */
+        margin: 0;
+        
+    }
+    
+.box .h2 {
+        margin: 0; /* Remove any default margins */
+        padding: 0; /* Remove any default padding */
+    }
+
+.box .p2 h2 {
+        margin: 0; /* Remove margins on the h2 element */
+    }
+    
+.box .p2 p {
+        margin: 0; /* Remove margins on the p element */
+        padding: 0; /* Remove padding on the p element */
+        margin-bottom: 30px;
+       
+    }
+   
+    
+.box   .p3 h2 {
+        margin: 0; /* Remove margins on the h2 element */
+    }
+    
+.box  .p3 p {
+        margin: 0; /* Remove margins on the p element */
+        padding: 0; /* Remove padding on the p element */
+        margin-bottom: 30px;
+        
+    }
+    
+
+    
+.box    .p4 h2 {
+        margin: 0; /* Remove margins on the h2 element */
+    }
+    
+.box    .p4 p {
+        margin: 0; /* Remove margins on the p element */
+        padding: 0; /* Remove padding on the p element */
+        margin-bottom: 30px;
+    }
+    
+h1 {
+    
+    color: #C72444;
+    font-family:'Volkhov', serif;
+    font-style: bold;
+    font-size: 18px;
+}
+
+h2{
+    color: #387464;
+    font-family:'Volkhov', serif;
+    font-style: bold;
+    font-size: 16px;
+    
+}
+
+p{
+    color: #2D2C2C;
+    font-family:'Gabarito', sans-serif;
+    font-style:normal;
+    font-size: 12px;
+    
+}
