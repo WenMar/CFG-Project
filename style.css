@@ -1,0 +1,27 @@
+#hero-banner {
+    background-image: url('Images/davies-designs-studio-PvGt65_l0FU-unsplash.jpg');
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center-align the content vertically */
+    align-items: center; /* Center-align the content horizontally */
+    height: 100vh; /* Set the height to 100% of the viewport height for vertical centering */
+}
+
+#hero-banner h1 {
+    font-size: 80px; 
+}
+
+#countdown {
+    font-size: 100px;
+    margin-bottom: 60px;
+}
+
+#search_button {
+    background-color: #007BFF; /* Set the background color */
+    color: #fff; /* Set the text color */
+    border: none; /* Remove the button border */
+    padding: 10px 20px; /* Adjust padding as needed for size */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    font-size: 16px; /* Set the font size */
+}
