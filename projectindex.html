@@ -1,68 +1,125 @@
 <!DOCTYPE html>
-<html>
-   
-        
+<html lang="en">
 <head>
-    <title>Our Best Selling Christmas Products</title>
-    <link rel="stylesheet" type="text/css" href="projectstyle.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projectstyle.css">
+    <title>Christmas Guide</title>
 </head>
 <body>
+    <div id="hero-banner">
+        <h1> Festive Delights </h1>
+
+        <div id="ChristmasCountdown">
+            <p class="days-until"> It's just</p>
+            <div id="countdown"></div>
+            <p id="the-big-day"> until the big day! </p>
+        </div>
+
+        <div id="search-container">
+            <input type="text" id="searchInput" placeholder="Searching for a specific product or article?">
+        </div>
+    </div>
+
     <div class="sidebar">
-       
-          <audio controls>
-            <source src="All-I-Want-for-Christmas.mp3" type="audio/mpeg">
-           </audio>
-           <h2>Latest Christmas News</h2>
-           <h3>Top Tech Gadgets for Christmas Wish Lists in 2023</h3>
+        <h2>Latest Christmas News</h2>
+        <h3>Top Tech Gadgets for Christmas Wish Lists in 2023</h3>
+        <img src="https://i.imgur.com/BDNTGeE.png" alt="Tech Gadgets" width="250" height="200" />
         <p>Explore the latest tech trends and gadgets that are expected to be hot items on Christmas wish lists this year. From smart home devices to gaming consoles, uncover what's in demand for tech-savvy shoppers.</p>
         <h3>Eco-Friendly Gift Ideas for a Sustainable Christmas</h3>
+        <img src="https://i.imgur.com/4XfC0Pz.png" alt="Tech Gadgets" width="250" height="200" />
         <p>Highlight eco-conscious gift options and sustainable practices for a green Christmas celebration. From reusable wrapping to eco-friendly gift choices, share tips for reducing environmental impact during the holidays.</p>
         <h3>Virtual Christmas Celebrations: Connecting Loved Ones from Afar</h3>
+        <img src="https://i.imgur.com/TkGwso3.jpg" alt="Tech Gadgets" width="250" height="200" />
         <p>Discuss how families and friends are embracing virtual gatherings to stay connected during the holiday season. Share heartwarming stories of creative online celebrations and offer tips for hosting a memorable virtual Christmas party.</p>
-       
     </div>
+
+    <!-- JavaScript code -->
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Dec 25, 2023 00:00:01").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes, and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in the element with id "countdown"
+            var countdownElement = document.getElementById("countdown");
+            if (countdownElement) {
+                countdownElement.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            }
+
+            // If the count down is over, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                countdownElement.innerHTML = "EXPIRED";
+            }
+        }, 1000);
+
+        // Get references to the input and results elements
+        const searchInput = document.getElementById("searchInput");
+        const searchResults = document.getElementById("searchResults");
+
+        // Function to perform the search
+        function performSearch() {
+            const query = searchInput.value;
+
+            // Simulate a search by displaying the query in the results
+            searchResults.textContent = "Showing results for " + query;
+        }
+
+        // Add an input event listener to the search input field
+        searchInput.addEventListener("input", performSearch);
+    </script>
     <section class="product-section">
         <h2 class="product-header">Our Best Selling Christmas Products</h2>
-        <div class="product-grid">
-            <div class="product-item">
-                <img src="macarons.jpg" alt="Product 1" class="product-image" width="250" height="300">
-                <div class="product-description">
-                    <h3>Macarons</h3>
-                    <p>Delicate Holiday Macarons</p>
-                    <h4>£9.99</h4>
-                    <button class="add-to-basket">Add to Basket</button>
-                    
-                </div>
-            </div>
-            <div class="product-item">
-                <img src="cards.jpg" alt="Product 1" class="product-image" width="250" height="300">
-                <div class="product-description">
-                    <h3>Cards</h3>
-                    <p>Festive Christmas Cards</p>
-                    <h4>£6.99</h4>
-                    <button class="add-to-basket">Add to Basket</button>
-                </div>
-            </div>
-            <div class="product-item">
-                <img src="trees.jpg" alt="Product 1" class="product-image" width="250" height="300">
-                <div class="product-description">
-                    <h3>Trees</h3>
-                    <p>Classic Christmas Trees</p>
-                    <h4>£45</h4>
-                    <button class="add-to-basket">Add to Basket</button>
-                </div>
-            </div>
-            <div class="product-item">
-                <img src="stocking.jpg" alt="Product 1" class="product-image" width="250" height="300">
-                <div class="product-description">
-                    <h3>Stockings</h3>
-                    <p>Cozy Christmas Stockings</p>
-                    <h4>£15</h4>
-                    <button class="add-to-basket">Add to Basket</button>
-                </div>
+     <div class="product-grid">
+        <div class="product-item">
+            <img src="https://i.imgur.com/9WFVDpi.jpg" alt="Macarons" class="product-image" width="250" height="250">
+            <div class="product-description">
+                <h3>Cards</h3>
+                <p>Festive Christmas Cards</p>
+                <h4>£6.99</h4>
+                <button class="add-to-basket">Add to Basket</button>
             </div>
         </div>
-    </section>
+        <div class="product-item">
+            <img src="https://i.imgur.com/4J2oXAc.jpg" alt="Cards" class="product-image" width="250" height="250">
+            <div class="product-description">
+                <h3>Cards</h3>
+                <p>Festive Christmas Cards</p>
+                <h4>£6.99</h4>
+                <button class="add-to-basket">Add to Basket</button>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="https://i.imgur.com/TwsGZZA.jpg" alt="Trees" class="product-image" width="250" height="250">
+            <div class="product-description">
+                <h3>Trees</h3>
+                <p>Classic Christmas Trees</p>
+                <h4>£45</h4>
+                <button class="add-to-basket">Add to Basket</button>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="https://i.imgur.com/59Rv8FQ.jpg" alt="Stockings" class="product-image" width="250" height="250">
+            <div class="product-description">
+                <h3>Stockings</h3>
+                <p>Cozy Christmas Stockings</p>
+                <h4>£15</h4>
+                <button class="add-to-basket">Add to Basket</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
