@@ -89,7 +89,69 @@ p {
     font-family: 'Gabarito', sans-serif;
     font-style: normal;
     font-size: 12px;
+
+    /* CSS for the table setting section */
 }
+.table-setting-promo {
+    background-color: #ffffff; 
+    padding: 20px;
+    text-align: center;
+}
+
+.table-setting-promo h2 {
+    color: #387464;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px auto;
+    text-align: center;
+    max-width: 80%; 
+}
+
+
+.table-setting-promo p {
+    color: #2D2C2C; 
+    font-size: 16px; 
+    margin-bottom: 10px; /* Space below the paragraph */
+}
+
+.table-setting-promo img {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 10px; 
+    margin-top: 20px; 
+}
+
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.image-container button {
+    margin-top: 10px; /* Add space between the image and the button */
+}
+
+.promo-button {
+    background-color: #387464;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+}
+
+    
 
 /* CSS for the product section */
 
@@ -98,7 +160,7 @@ p {
     margin-left: 20%; 
     padding: 20px;
     margin-top: 20px; 
-    background-color: #E3A27A;
+    background-color: #e9deab; E6DCB1
 }
 
 .header-container {
