@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projectstyle.css">
+    <title>Christmas Guide</title>
+</head>
+<body>
+    <div id="hero-banner">
+        <h1> Festive Delights </h1>
+
+        <div id="ChristmasCountdown">
+            <p class="days-until"> It's just</p>
+            <div id="countdown"></div>
+            <p id="the-big-day"> until the big day! </p>
+        </div>
+
+        <div id="search-container">
+            <input type="text" id="searchInput" placeholder="Searching for a specific product or article?">
+            <button class="search-button">Search</button>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <h2>Join our community and celebrate the holiday season with our exciting Christmas events!</h2>
+        <button class= "Join-Community">Join our Community, it's free</button>
+
+        <h2>Check out our events near you</h2>
+        <h3>We are back in London, 20th December </h3>
+        <p>You can find our stall at Leicester Square Christmas market</p>
+        <img src="christmas-market-1864241_1280.jpg" alt="Christmas Stall"width="230" height="190" />
+        
+        <h3>Come to our Private Chrismtas party in Norwich, 22nd December at 9 pm </h3>
+        <p>XYZ Building, room 123, the event is free</p>
+        <img src="champagne-3515140_1280.jpg" alt="Christmas Stall"width="230" height="190" />
+        <button class="Join-event">Join event</button> 
+
+        <h2>Our Latest Christmas News</h2>
+        <h3>Top Tech Gadgets for Christmas Wish Lists in 2023</h3>
+        <img src="https://i.imgur.com/BDNTGeE.png" alt="Tech Gadgets" width="220" height="200" />
+        <p>Explore the latest tech trends and gadgets that are expected to be hot items on Christmas wish lists this year. From smart home devices to gaming consoles, uncover what's in demand for tech-savvy shoppers.</p>
+        <h3>Eco-Friendly Gift Ideas for a Sustainable Christmas</h3>
+        <img src="https://i.imgur.com/4XfC0Pz.png" alt="Tech Gadgets" width="220" height="200" />
+        <p>Highlight eco-conscious gift options and sustainable practices for a green Christmas celebration. From reusable wrapping to eco-friendly gift choices, share tips for reducing environmental impact during the holidays.</p>
+        <h3>Virtual Christmas Celebrations: Connecting Loved Ones from Afar</h3>
+        <img src="https://images.unsplash.com/photo-1612831455359-970e23a1e4e9?auto=format&fit=crop&q=80&w=1925&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tech Gadgets" width="230" height="190" />
+        <p>Share heartwarming stories of creative online celebrations and offer tips for hosting a memorable virtual Christmas party.</p>
+    
+    </div>
+
+
+    <!-- JavaScript code -->
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Dec 25, 2023 00:00:01").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes, and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in the element with id "countdown"
+            var countdownElement = document.getElementById("countdown");
+            if (countdownElement) {
+                countdownElement.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            }
+
+            // If the count down is over, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                countdownElement.innerHTML = "EXPIRED";
+            }
+        }, 1000);
+
+        // Get references to the input and results elements
+        const searchInput = document.getElementById("searchInput");
+        const searchResults = document.getElementById("searchResults");
+
+        // Function to perform the search
+        function performSearch() {
+            const query = searchInput.value;
+
+            // Simulate a search by displaying the query in the results
+            searchResults.textContent = "Showing results for " + query;
+        }
+
+        // Add an input event listener to the search input field
+        searchInput.addEventListener("input", performSearch);
+    </script>
+    
+   <section class="table-setting-promo">
+    <h2>Check Out Our 2023 Guide On 
+        How to Set the Perfect Christmas Table</h2>
+    <p>Get ready for the perfect Christmas table setting with our guide. Impress your guests with festive decorations and more!</p>
+    <div class="image-container">
+        <img src="https://images.unsplash.com/photo-1606568939837-973ec094d63a?auto=format&fit=crop&q=80&w=2069&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Christmas Table Setting" width="400" height="300">
+        <a href="Guide.html" class="promo-button">Read Our Guide</a>
+    </div>
+</section>
+
+    <section class="product-section">
+        <h2 class="product-header">Our Best Selling Christmas Products</h2>
+     <div class="product-grid">
+        <div class="product-item">
+            <img src="https://images.unsplash.com/photo-1607434082456-9047d75e4d23?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Macarons" class="product-image" width="250" height="250">
+            <div class="product-description">
+                <h3>Macarons</h3>
+                <p>Delicate Holiday Macarons</p>
+                <h4>£3.99</h4>
+                <button class="add-to-basket">Add to Basket</button>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="https://images.unsplash.com/photo-1577201866982-97ac098537e5?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cards" class="product-image" width="250" height="250">
+            <div class="product-description">
+                <h3>Cards</h3>
+                <p>Festive Christmas Cards</p>
+                <h4>£6.99</h4>
+                <button class="add-to-basket">Add to Basket</button>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="https://images.unsplash.com/photo-1544427998-ce5e0a5b2bd7?auto=format&fit=crop&q=80&w=1888&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Trees" class="product-image" width="250" height="250">
+            <div class="product-description">
+                <h3>Trees</h3>
+                <p>Classic Christmas Trees</p>
+                <h4>£45</h4>
+                <button class="add-to-basket">Add to Basket</button>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="https://images.unsplash.com/photo-1638195183794-40cdae8dd7dc?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Stockings" class="product-image" width="250" height="250">
+            <div class="product-description">
+                <h3>Stockings</h3>
+                <p>Cozy Christmas Stockings</p>
+                <h4>£15</h4>
+                <button class="add-to-basket">Add to Basket</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
