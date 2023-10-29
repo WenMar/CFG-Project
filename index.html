@@ -9,17 +9,15 @@
 <body>
     <div id="hero-banner">
             <h1> Festive Delights </h1>
-
             <div id="ChristmasCountdown">
-            <p class="days-until"> It's just</p>
+            <p id="days-until"> It's just</p>
             <div id="countdown"></div>
             <p id="the-big-day"> until the big day! </p>
-             </div>
-           
-          <div id="search-container">
+          </div>
+            <div id="search-container">
               <input type="text" id="searchInput" placeholder="Are you searching for a specific product or article?">
            </div>
-            <div id="searchResults"></div>
+          <div id="searchResults"></div>
     </div>
     
     <script>
@@ -53,21 +51,22 @@
       }
       }, 1000);
 
+      document.addEventListener("DOMContentLoaded", function() {
+    // Get references to the input and results elements
+    const searchInput = document.getElementById("searchInput");
+    const searchResults = document.getElementById("searchResults");
 
-     // Get references to the input and results elements
-     const searchInput = document.getElementById("searchInput");
-        const searchResults = document.getElementById("searchResults");
+    // Function to perform the search
+    function performSearch() {
+        const query = searchInput.value;
+        
+        // Simulate a search by displaying the query in the results
+        searchResults.textContent = "Showing results for " + query;
+    }
 
-        // Function to perform the search
-        function performSearch() {
-            const query = searchInput.value;
-            
-            // Simulate a search by displaying the query in the results
-            searchResults.textContent = "Showing results for " + query;
-        }
-
-        // Add an input event listener to the search input field
-        searchInput.addEventListener("input", performSearch);
+    // Add an input event listener to the search input field
+    searchInput.addEventListener("input", performSearch);
+});
     
     </script>
 </body>
