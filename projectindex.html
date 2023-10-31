@@ -32,12 +32,12 @@
         <h3>Virtual Christmas Celebrations: Connecting Loved Ones from Afar</h3>
         <img src="https://images.unsplash.com/photo-1612831455359-970e23a1e4e9?auto=format&fit=crop&q=80&w=1925&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tech Gadgets" width="250" height="200" />
         <p>Discuss how families and friends are embracing virtual gatherings to stay connected during the holiday season. Share heartwarming stories of creative online celebrations and offer tips for hosting a memorable virtual Christmas party.</p>
-        <h3>Virtual Christmas Celebrations: Connecting Loved Ones from Afar</h3>
         <button class="sidebar-button">Read More</button>
 
+        
+
         <div class="forum-container">
-            <h2>Christmas Forum</h2>
-            
+            <h2>Community Forum</h2>
             <div class="forum">
                 <div class="post-form">
                     <h3>Create a New Post</h3>
@@ -45,10 +45,32 @@
                         <input type="text" id="username" placeholder="Your Name" required>
                         <textarea id="postContent" placeholder="Your Message" required></textarea>
                         <button type="submit">Submit</button>
+                        <div class="forum">
+                            <div class="post">
+                                <div class="post-info">
+                                    <h3>Latest Posts</h3>
+                                    <h4>Post Subject 1</h4>
+                                    <p class="post-date">Date: December 1, 2023</p>
+                                </div>
+                                <p class="post-content">Favourite Christmas Traditions?</p>
+                            </div>
+                            <div class="post">
+                                <div class="post-info">
+                                    <h4>Post Subject 2</h4>
+                                    <p class="post-date">Date: December 2, 2023</p>
+                                </div>
+                                <p class="post-content">DIY Christmas Decorations Tip</p>
+                                <div class="pagination">
+                                    <a href="#">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">Next</a>
+                                </div>
+                            </div>
+                        
+                            </div>
+                        </div>
                     </form>
-                </div>
-                <div class="posts">
-                    Stocking fillers for kids at uni
                 </div>
             </div>
         </div>
@@ -75,32 +97,30 @@
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Output the result in the element with id "countdown"
             var countdownElement = document.getElementById("countdown");
             if (countdownElement) {
                 countdownElement.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
             }
 
-            // If the count down is over, write some text
+            
             if (distance < 0) {
                 clearInterval(x);
                 countdownElement.innerHTML = "EXPIRED";
             }
         }, 1000);
 
-        // Get references to the input and results elements
+        
         const searchInput = document.getElementById("searchInput");
         const searchResults = document.getElementById("searchResults");
 
-        // Function to perform the search
+        
         function performSearch() {
             const query = searchInput.value;
 
-            // Simulate a search by displaying the query in the results
             searchResults.textContent = "Showing results for " + query;
         }
 
-        // Add an input event listener to the search input field
+        
         searchInput.addEventListener("input", performSearch);
     </script>
     

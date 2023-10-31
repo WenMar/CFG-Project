@@ -69,19 +69,36 @@ p {
     min-height: 100vh;
 }
 
-
 .sidebar h2 {
     color: #C30F16;
-    font-family:'Volkhov', serif;
+    font-family: 'Volkhov', serif;
     font-style: bold;
     font-size: 24px;
     margin-bottom: 40px;
+    cursor: pointer; /* Add cursor style to h2 */
 }
+
 .sidebar h3 {
     color: #387464;
-    font-family:'Volkhov', serif;
+    font-family: 'Volkhov', serif;
     font-style: bold;
     font-size: 16px;
+    cursor: pointer; /* Add cursor style to h3 */
+}
+
+.sidebar-button {
+    background-color: #387464;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Add cursor style to .sidebar-button */
+    transition: background-color 0.3s;
+}
+
+.sidebar-button:hover {
+    background-color: #C30F16;
 }
 
 .sidebar p {
@@ -90,24 +107,8 @@ p {
     font-style: normal;
     font-size: 12px;
     margin-bottom: 40px;
+}
 
-    
-    .sidebar-button {
-        background-color: #387464;
-        color: #fff;
-        font-weight: bold;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-    
-    .sidebar-button:hover {
-        background-color: #C30F16;
-    }
-    
-    
 
     /* CSS for the table setting section */
 }
@@ -118,24 +119,32 @@ p {
     padding: 20px;
 
 }
-   
-    .table-setting-promo h2 {
-        color: #387464;
-        font-size: 30px;
-        font-weight: bold;
-        margin: 10px auto;
-        text-align: center;
-        max-width: 51%;
-        margin-bottom: 20px;
-    }
-    
-    .table-setting-promo p {
-        color: #2D2C2C;
-        font-size: 16px;
-        margin: 10px auto;
-        text-align: center;
-        max-width: 50%;
-    }
+
+.table-setting-promo {
+    text-align: center;
+    margin-left: 22%;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.table-setting-promo h2 {
+    color: #387464;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px auto;
+    text-align: center; /* Ensure text is centered */
+    max-width: 51%;
+    margin-bottom: 20px;
+}
+
+.table-setting-promo p {
+    color: #2D2C2C;
+    font-size: 16px;
+    margin: 10px auto;
+    text-align: center; /* Ensure text is centered */
+    max-width: 50%;
+}
+
 
 .table-setting-promo img {
     max-width: 100%; 
@@ -173,7 +182,7 @@ p {
     border-radius: 5px;
     cursor: pointer;
     align-items: center;
-    transition: background-color 0.3s; /* Add a smooth transition effect */
+    transition: background-color 0.3s; 
 }
 
 .promo-button:hover {
@@ -187,9 +196,9 @@ p {
 .product-section {
     text-align: center;
     margin-left: 22%; 
-    padding: 20px;
+    padding: 60px;
     margin-top: 20px; 
-    background-color: #e9deab; E6DCB1
+    background-color: #e9deab; 
 }
 
 .header-container {
@@ -199,7 +208,7 @@ p {
 
 .product-header {
     font-size: 30px;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 40px;
     color: #387464;
 }
@@ -215,11 +224,11 @@ p {
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 10px;
+    padding: 65px;
     text-align: left;
     transition: background-color 0.3s;
-    max-width: 400px; /* Set a maximum width for the product items */
-    margin: 0 auto; /* Center the product items in the available space */
+    max-width: 400px; 
+    margin: 0 auto; 
 }
 
 .product-item:hover {
@@ -263,10 +272,10 @@ p {
 .forum-container {
     background-color: #387464;
     border: 3px solid #C30F16;
-    width: 100%; /* Match the width of the sidebar */
+    width: 100%; 
     color: #fff;
     text-align: center;
-    min-height: 50vh; /* Match the height of the sidebar */
+    min-height: 20vh; 
     position: relative;
     margin-top: 80px;
 }
@@ -281,36 +290,42 @@ p {
 
 .forum {
     background-color: #fff;
-    padding: 20px;
+    border: #387464 2px solid;
+    padding: 0px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 0 auto; /* Center-align the forum content */
 
 
-
+ 
 
 .post-form {
-    margin: 20px 0; /* Add space between the form and the container */
+    margin: 20px 0; 
 }
 
 .post-form h3 {
-    margin: 0 auto 20px; /* Add space below the title */
+    margin: 0 auto 20px; 
 }
 
-/* Adjust the input and button styles to place the submit button below the input */
+.post-content {
+    color: #387464; 
+    font-weight: bold; 
+    font-size: 14px; 
+}
+
 #postForm {
-    text-align: center; /* Center-align the form elements */
+    text-align: center; /
 }
 
 #username,
 #postContent {
     display: block;
-    margin: 10px auto; /* Add some space around them */
+    margin: 10px auto; 
 }
 
 #postForm button[type="submit"] {
     display: block;
-    margin: 10px auto 20px; /* Add space below the button */
+    margin: 20px auto 20px; 
     background-color: #387464;
     color: #fff;
     font-weight: bold;
@@ -325,8 +340,42 @@ p {
     background-color: #C30F16;
 }
 
-/* Add space between the community section and the "Read More" button */
-.community-section {
-    margin-bottom: 20px;
+.post-info {
+    margin-bottom: 10px; /* Reduce the space between post-info and post-content */
+}
+.post-info h3 {
+    color: #C30F16; 
+    font-weight: bold; 
+    font-size: 20px; 
+    margin: 10px 0; /* Adjust top and bottom margins */
+}
+}
+.posts p {
+    font-family: Gabarito, sans-serif;
+    font-size: 16px; 
+    color: #333; 
+    margin: 0; 
+    padding: 10px 0;
 }
 
+.post-date {
+    font-family: Gabarito, sans-serif;
+    font-size: 16px; 
+    color: #333; 
+    margin: 0px; 
+    padding: 0px 0;
+    height: 5px;
+}
+
+.post-content {
+    color: #387464;
+    background-color: #e9deab;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 50px;
+    height: 8px;
+    
+
+    width: 62.5%;
+    cursor: pointer; 
+}
