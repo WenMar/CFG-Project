@@ -60,14 +60,13 @@ p {
     text-align: center;
 }
 
-
 .sidebar {
     width: 22%;
     background-color: #F2F2F2;
     color: #000;
     padding: 20px;
     float: left;
-    height: 100%; /* Set a minimum height to match the product section */
+    min-height: 100vh;
 }
 
 
@@ -90,6 +89,25 @@ p {
     font-family: 'Gabarito', sans-serif;
     font-style: normal;
     font-size: 12px;
+    margin-bottom: 40px;
+
+    
+    .sidebar-button {
+        background-color: #387464;
+        color: #fff;
+        font-weight: bold;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .sidebar-button:hover {
+        background-color: #C30F16;
+    }
+    
+    
 
     /* CSS for the table setting section */
 }
@@ -239,3 +257,76 @@ p {
     background-color: #387464;
     color: #fff;
 }
+
+/* CSS for the forum container and forum section */
+
+.forum-container {
+    background-color: #387464;
+    border: 3px solid #C30F16;
+    width: 100%; /* Match the width of the sidebar */
+    color: #fff;
+    text-align: center;
+    min-height: 50vh; /* Match the height of the sidebar */
+    position: relative;
+    margin-top: 80px;
+}
+
+.forum-container h2 {
+    color: #fff;
+    font-family:'Volkhov', serif;
+    font-style: bold;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.forum {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Center-align the forum content */
+
+
+
+
+.post-form {
+    margin: 20px 0; /* Add space between the form and the container */
+}
+
+.post-form h3 {
+    margin: 0 auto 20px; /* Add space below the title */
+}
+
+/* Adjust the input and button styles to place the submit button below the input */
+#postForm {
+    text-align: center; /* Center-align the form elements */
+}
+
+#username,
+#postContent {
+    display: block;
+    margin: 10px auto; /* Add some space around them */
+}
+
+#postForm button[type="submit"] {
+    display: block;
+    margin: 10px auto 20px; /* Add space below the button */
+    background-color: #387464;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#postForm button[type="submit"]:hover {
+    background-color: #C30F16;
+}
+
+/* Add space between the community section and the "Read More" button */
+.community-section {
+    margin-bottom: 20px;
+}
+
