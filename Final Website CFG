@@ -50,11 +50,7 @@ TYPE html>
 <p>As we prepare to celebrate the most wonderful time of the year, let's embrace the magic of togetherness, even when we're miles apart. 🎁💻 Let's make this holiday season a reminder that love knows no boundaries, and our bonds are stronger than any distance. Share your own virtual Christmas plans and traditions; I'd love to hear how you're staying connected and spreading joy this year! 🌐❤️🎉
     Post by July </p>
        
-                    <h3>Create a New Post</h3>
-                    <form id="postForm">
-                        <input type="text" id="username" placeholder="Your Name" required>
-                        <textarea id="postContent" placeholder="Your Message" required></textarea>
-                        <button type="submit">Submit</button>  
+                  
     </div>
 
     <!-- JavaScript code -->
