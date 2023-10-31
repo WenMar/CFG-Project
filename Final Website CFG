@@ -24,8 +24,9 @@ TYPE html>
 
     <div class="sidebar">
         <h2>Join our community and celebrate the holiday season with our exciting Christmas events!</h2>
-        <button class= "Join-Community">Join our Community, it's free</button>
-
+<a href="community.html">
+    <button class="Join-Community">Join our Community, it's free</button>
+</a>
         <h2>Our events near you</h2>
         <h3>London, 20th December </h3>
         <p>You can find our stall at Leicester Square Christmas market</p>
